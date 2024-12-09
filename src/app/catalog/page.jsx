@@ -7,7 +7,6 @@
 
 
 // const products = [
-//   { id: 1, name: "Колбаса вареная", type: "EXTRA", calories: 235, fatLevel: "низкий", meatType: "свинина" },
 //   { id: 2, name: "Колбаса докторская", type: "Премиум", calories: 250, fatLevel: "средний", meatType: "говядина" },
 //   { id: 3, name: "Колбаса молочная", type: "Стандарт", calories: 220, fatLevel: "высокий", meatType: "курица" },
 //   // Добавьте больше продуктов
@@ -111,7 +110,7 @@ import Footer from "@/components/Footer/Footer";
 import styles from "./catalog.module.scss";
 
 const products = [
-  { id: 1, name: "Колбаса вареная", type: "EXTRA", calories: 235, fatLevel: "низкий", meatType: "свинина" },
+  { id: 1, name: "Колбаса вареная", type: "EXTRA", calories: 235, fatLevel: "низкий", meatType: "говядина" },
   { id: 2, name: "Колбаса докторская", type: "Премиум", calories: 250, fatLevel: "средний", meatType: "говядина" },
   { id: 3, name: "Колбаса молочная", type: "Стандарт", calories: 220, fatLevel: "высокий", meatType: "курица" },
 ];
@@ -148,7 +147,7 @@ export default function CatalogPage() {
     } else if (filter === "sausages") {
       setFilteredProducts(products.filter((product) => product.type));
     } else if (filter === "meatType") {
-      setFilteredProducts(products.filter((product) => product.meatType === "свинина"));
+      setFilteredProducts(products.filter((product) => product.meatType === "говядина"));
     } else if (filter === "fatLevel") {
       setFilteredProducts(products.filter((product) => product.fatLevel === "низкий"));
     }
@@ -210,7 +209,6 @@ export default function CatalogPage() {
                 </button>
                 <div className={`${styles.dropdownMenu} ${isDropdown ? styles.active : ""}`}>
                   {/* <button className={styles.dropdownMenuItem} onClick={() => handleFilterByMeatType("all")}>Все типы мяса</button> */}
-                  <button className={`${styles.dropdownMenuItem} ${activeFilter == "свинина" ? styles.active : ""}`} onClick={() => handleFilterByMeatType("свинина")}>Свинина</button>
                   <button className={`${styles.dropdownMenuItem} ${activeFilter == "говядина" ? styles.active : ""}`} onClick={() => handleFilterByMeatType("говядина")}>Говядина</button>
                   <button className={`${styles.dropdownMenuItem} ${activeFilter == "курица" ? styles.active : ""}`} onClick={() => handleFilterByMeatType("курица")}>Курица</button>
                 </div>
