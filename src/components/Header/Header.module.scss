@@ -1,0 +1,362 @@
+@import "../../app/styles/mixins.scss";
+
+.header {
+  @include resl("padding-top", 24px);
+  @include resl("padding-bottom", 24px);
+  background-color: #f1f3f7;
+  @include media(576) {
+    @include resa("padding-top", 16px);
+    @include resa("padding-bottom", 16px);
+  }
+  &Container {
+    @include resl("max-width", 1210px);
+  }
+  &Content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &Logo {
+    display: inline-block;
+    @include resl("width", 65.3px);
+    @include resl("height", 44px);
+    @include media(576) {
+      @include resa("width", 54px);
+      @include resa("height", 40px);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &Left {
+    display: flex;
+    align-items: center;
+    @include resl("gap", 128px);
+    @include media(576) {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+  &Nav {
+    display: flex;
+    align-items: center;
+    @include resl("gap", 24px);
+    &.mob {
+      display: none;
+    }
+    @include media(576) {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      @include resa("margin-top", 20px);
+      @include resa("gap", 20px);
+      &.mob {
+        display: flex;
+      }
+    }
+    &Link {
+      font-weight: 600;
+      @include resl("font-size", 21px);
+      @include resl("line-height", 26.78px);
+      @include media(576) {
+        @include resa("font-size", 21px);
+        @include resa("line-height", 26.78px);
+      }
+    }
+  }
+  &Right {
+    @include media(576) {
+      display: flex;
+      flex-direction: column;
+      left: 0;
+      top: 0;
+      position: fixed;
+      height: 100vh;
+      background-color: #ffffff;
+      z-index: 60;
+      transform: translateX(-100%);
+      transition: 0.3s all;
+      width: 100%;
+      @include resa("padding", 12px);
+    }
+    &.active {
+      transform: translateX(0);
+    }
+  }
+  &Btn {
+    color: #ffffff;
+    font-weight: 500;
+    background-color: #ee2c3f;
+    box-shadow: 0px 13px 17px 0px #00000014;
+    @include resl("font-size", 17px);
+    @include resl("line-height", 24px);
+    @include resl("padding", 10px);
+    @include resl("padding-left", 16px);
+    @include resl("padding-right", 16px);
+    @include resl("border-radius", 12px);
+    @include media(576) {
+      @include resa("margin-top", 24px);
+      @include resa("font-size", 17px);
+      @include resa("line-height", 24px);
+      @include resa("padding", 12px);
+      @include resa("padding-left", 16px);
+      @include resa("padding-right", 16px);
+      @include resa("border-radius", 12px);
+    }
+    &Second {
+      background-color: #2f5b79;
+    }
+  }
+  &Burger {
+    &Btn {
+      display: none;
+      @include media(576) {
+        display: flex;
+        @include resa("width", 32px);
+        @include resa("height", 20px);
+      }
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &Close {
+      display: none;
+      @include media(576) {
+        display: flex;
+        justify-content: flex-end;
+        @include resa("padding", 16px);
+        @include resa("padding-top", 20px);
+      }
+      button {
+        @include resa("width", 24px);
+        @include resa("height", 24px);
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s all;
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  &Box {
+    z-index: 2;
+    background-color: #f5f5f5;
+    @include resl("width", 340px);
+    @include resl("border-radius", 16px);
+    @include resl("padding", 24px);
+    @include resl("padding-top", 16px);
+    @include resl("padding-bottom", 28px);
+    position: relative;
+    @include media(576) {
+      @include resa("width", 340px);
+      @include resa("border-radius", 16px);
+      @include resa("padding", 16px);
+      @include resa("padding-top", 20px);
+      @include resa("padding-bottom", 28px);
+    }
+  }
+  &Close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #2f5b79;
+    box-shadow: 0px 4px 10px 1px #2b73dc1f;
+    @include resl("width", 56px);
+    @include resl("height", 56px);
+    @include resl("top", -26px);
+    @include resl("right", -29px);
+    @include media(576) {
+      @include resa("width", 40px);
+      @include resa("height", 40px);
+      @include resa("top", -26px);
+      @include resa("right", -20px);
+    }
+    img {
+      @include resl("width", 32px);
+      @include resl("height", 32px);
+      @include media(576) {
+        @include resa("width", 24px);
+        @include resa("height", 24px);
+      }
+    }
+  }
+  &Title {
+    color: #2f5b79;
+    font-weight: 600;
+    background-color: #ffffff;
+    @include resl("border-radius", 12px);
+    @include resl("font-size", 32px);
+    @include resl("line-height", 31px);
+    @include resl("padding", 8px);
+    @include media(576) {
+      @include resa("border-radius", 12px);
+      @include resa("font-size", 32px);
+      @include resa("line-height", 31px);
+      @include resa("padding", 8px);
+    }
+  }
+  &List {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include resl("margin-top", 16px);
+    @include resl("gap", 8px);
+    @include media(576) {
+      @include resa("margin-top", 16px);
+      @include resa("gap", 8px);
+    }
+    label {
+      width: 100%;
+    }
+    input {
+      width: 100%;
+      background-color: #ffffff;
+      font-weight: 400;
+      border: #b8c4d7 solid;
+      outline: none;
+      color: #2f5b79;
+      @include resl("border-width", 1px);
+      @include resl("font-size", 15px);
+      @include resl("line-height", 18px);
+      @include resl("border-radius", 12px);
+      @include resl("padding", 13px);
+      @include resl("padding-left", 16px);
+      @include resl("padding-right", 16px);
+      @include media(576) {
+        @include resa("border-width", 1px);
+        @include resa("font-size", 15px);
+        @include resa("line-height", 18px);
+        @include resa("border-radius", 12px);
+        @include resa("padding", 13px);
+        @include resa("padding-left", 16px);
+        @include resa("padding-right", 16px);
+      }
+      &::placeholder {
+        color: #b8c4d7;
+      }
+    }
+  }
+  &Confirm {
+    display: flex;
+    align-items: center;
+    @include resl("margin-top", 24px);
+    @include resl("padding-left", 12px);
+    @include resl("gap", 12px);
+    @include media(576) {
+      @include resa("margin-top", 24px);
+      @include resa("padding-left", 12px);
+      @include resa("gap", 12px);
+    }
+    &Text {
+      color: #818c99;
+      a {
+        font-weight: 400;
+        color: #2f5b79;
+        text-decoration: underline;
+      }
+      @include resl("font-size", 13px);
+      @include resl("line-height", 18px);
+      @include resl("letter-spacing", -0.4px);
+      @include media(576) {
+        @include resa("font-size", 13px);
+        @include resa("line-height", 18px);
+        @include resa("letter-spacing", -0.4px);
+      }
+    }
+  }
+  &Checkbox {
+    cursor: pointer;
+    position: relative;
+    border: #2f5b79 solid;
+    background-color: #ffffff;
+    @include resl("min-width", 17px);
+    @include resl("min-height", 17px);
+    @include resl("height", 17px);
+    @include resl("width", 17px);
+    @include resl("border-radius", 3px);
+    @include resl("border-width", 1px);
+    @include media(576) {
+      @include resa("min-width", 17px);
+      @include resa("min-height", 17px);
+      @include resa("height", 17px);
+      @include resa("width", 17px);
+      @include resa("border-radius", 3px);
+      @include resa("border-width", 1px);
+    }
+    &Span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include resl("width", 16px);
+      @include resl("height", 16px);
+      background-image: url("/checkbox.svg");
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.1s all;
+      @include media(576) {
+        @include resa("width", 16px);
+        @include resa("height", 16px);
+      }
+    }
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+      &:checked ~ .modalCheckboxSpan {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  &Btn {
+    width: 100%;
+    background-color: #2f5b79;
+    color: #ffffff;
+    font-weight: 400;
+    @include resl("font-size", 17px);
+    @include resl("line-height", 20px);
+    @include resl("padding", 14px);
+    @include resl("border-radius", 12px);
+    @include resl("margin-top", 24px);
+    @include media(576) {
+      @include resa("font-size", 17px);
+      @include resa("line-height", 20px);
+      @include resa("padding", 14px);
+      @include resa("border-radius", 12px);
+      @include resa("margin-top", 24px);
+    }
+  }
+  &Filter {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}

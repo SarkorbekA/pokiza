@@ -1,0 +1,633 @@
+@import "../styles/mixins.scss";
+
+.header {
+  @include resl("padding-top", 19px);
+  @include resl("padding-bottom", 19px);
+  @include media(576) {
+    @include resa("padding-top", 18px);
+    @include resa("padding-bottom", 18px);
+  }
+  &Box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include media(576) {
+      flex-direction: column;
+      justify-content: flex-start;
+      @include resa("gap", 32px);
+      @include resa("padding-left", 16px);
+      @include resa("padding-right", 16px);
+      width: 100vw;
+      height: 100vh;
+      background-color: #ffffff;
+      left: 0;
+      top: 0;
+      z-index: 10;
+      position: fixed;
+      transform: translateX(-100%);
+      transition: 0.3s all;
+      &.active {
+        transform: translateX(0);
+      }
+    }
+  }
+  &Container {
+    @include resl("max-width", 1135px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include media(576) {
+      max-width: 100%;
+      @include resa("padding-left", 12px);
+      @include resa("padding-right", 12px);
+    }
+  }
+  &Btn {
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #ee2c3f;
+    box-shadow: 0px 8px 20px 0px #00000029;
+    @include resl("border-radius", 70px);
+    @include resl("padding", 13px);
+    @include resl("padding-left", 30px);
+    @include resl("padding-right", 30px);
+    @include resl("font-size", 14.14px);
+    @include resl("line-height", 16.12px);
+    @include media(576) {
+      @include resa("border-radius", 70px);
+      @include resa("padding", 13px);
+      text-wrap: nowrap;
+      width: 100%;
+      margin: auto;
+      @include resa("max-width", 300px);
+      @include resa("padding-left", 30px);
+      @include resa("padding-right", 30px);
+      @include resa("font-size", 14.14px);
+      @include resa("line-height", 16.12px);
+    }
+  }
+  &Logo {
+    display: flex;
+    @include resl("width", 60px);
+    @include resl("height", 32px);
+    @include media(576) {
+      order: -1;
+      @include resa("width", 60px);
+      @include resa("height", 32px);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &Left {
+    display: flex;
+    align-items: center;
+    @include resl("width", 500px);
+    @include media(576) {
+      width: 100%;
+    }
+  }
+  &Right {
+    display: flex;
+    justify-content: flex-end;
+    @include resl("width", 500px);
+    @include media(576) {
+      width: 100%;
+      justify-content: center;
+    }
+    &Btn {
+      text-transform: uppercase;
+      font-weight: 500;
+      color: #ee2c3f;
+      @include resl("font-size", 16px);
+      @include resl("line-height", 20.8px);
+      @include media(576) {
+        @include resa("font-size", 16px);
+        @include resa("line-height", 20.8px);
+      }
+    }
+  }
+}
+
+.burger {
+  &Btn {
+    display: none;
+    align-items: center;
+    @include resl("gap", 16px);
+    @include media(576) {
+      display: flex;
+      @include resa("gap", 12px);
+    }
+    svg {
+      @include resl("width", 56px);
+      @include resl("height", 10px);
+      @include media(576) {
+        @include resa("width", 40px);
+        @include resa("height", 10px);
+      }
+    }
+    h3 {
+      font-weight: 500;
+      color: #ee2c3f;
+      @include resl("font-size", 16px);
+      @include resl("line-height", 20.8px);
+      @include media(576) {
+        @include resa("font-size", 16px);
+        @include resa("line-height", 20.8px);
+      }
+    }
+  }
+  &Close {
+    display: none;
+    @include media(576) {
+      display: flex;
+      order: -1;
+      width: 100%;
+      justify-content: flex-end;
+      @include resa("padding-bottom", 16px);
+      @include resa("padding-top", 20px);
+    }
+    button {
+      @include resa("width", 24px);
+      @include resa("height", 24px);
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.content {
+  @include resl("margin-top", 68px);
+  @include media(576) {
+    @include resa("margin-top", 40px);
+  }
+  &Container {
+    @include resl("max-width", 1210px);
+    @include media(576) {
+      max-width: 100%;
+      @include resa("padding-left", 12px);
+      @include resa("padding-right", 12px);
+    }
+  }
+  &Back {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    @include resl("gap", 8px);
+    @include media(576) {
+      @include resa("gap", 4px);
+    }
+    svg {
+      @include resl("width", 28px);
+      @include resl("height", 28px);
+      @include media(576) {
+        @include resa("width", 24px);
+        @include resa("height", 24px);
+      }
+    }
+    h3 {
+      color: #8797a5;
+      font-weight: 500;
+      @include resl("font-size", 21px);
+      @include resl("line-height", 22px);
+      @include media(576) {
+        @include resa("font-size", 18px);
+        @include resa("line-height", 20px);
+      }
+    }
+  }
+  &Inner {
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 13px 40px 0px #d1d1d140;
+    border-color: #00000014;
+    border-style: solid;
+    @include resl("border-radius", 32px);
+    @include resl("border-width", 1px);
+    @include resl("padding", 32px);
+    @include resl("margin-top", 32px);
+    @include resl("gap", 24px);
+    @include media(576) {
+      @include resa("border-radius", 24px);
+      @include resa("border-width", 1px);
+      @include resa("padding", 16px);
+      @include resa("padding-top", 24px);
+      @include resa("padding-bottom,", 24px);
+      @include resa("margin-top", 32px);
+      @include resa("gap", 24px);
+      flex-direction: column;
+    }
+  }
+  &Img {
+    overflow: hidden;
+    @include resl("border-radius", 24px);
+    @include resl("width", 440px);
+    @include resl("height", 480px);
+    @include media(576) {
+      width: 100%;
+      height: 100%;
+      @include resa("border-radius", 16px);
+      aspect-ratio: 1/0.8;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &Right {
+    @include resl("width", 652px);
+    @include media(576) {
+      width: 100%;
+    }
+  }
+}
+
+.product {
+  &Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include media(576) {
+      flex-direction: column;
+      align-items: flex-start;
+      @include resa("gap", 8px);
+    }
+  }
+  &Name {
+    font-weight: 500;
+    @include resl("font-size", 36px);
+    @include resl("line-height", 44px);
+    @include media(576) {
+      @include resa("font-size", 30px);
+      @include resa("line-height", 36px);
+    }
+  }
+  &Icons {
+    display: flex;
+    align-items: center;
+    @include resl("gap", 12.5px);
+    @include media(576) {
+      @include resa("gap", 10px);
+    }
+    li {
+      border-radius: 50%;
+      background-color: #cf2027;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include resl("width", 44px);
+      @include resl("height", 44px);
+      @include media(576) {
+        @include resa("width", 36px);
+        @include resa("height", 36px);
+      }
+      svg {
+        @include resl("width", 27px);
+        @include resl("height", 27px);
+        @include media(576) {
+          @include resa("width", 20px);
+          @include resa("height", 20px);
+        }
+      }
+    }
+  }
+  &Box {
+    @include resl("margin-top", 16px);
+    @include media(576) {
+      @include resa("margin-top", 18px);
+    }
+    &Energy {
+      @include resl("padding-top", 12px);
+      @include media(576) {
+        @include resa("padding-top", 12px);
+      }
+    }
+  }
+  &Title {
+    font-weight: 700;
+    @include resl("font-size", 21px);
+    @include resl("line-height", 24px);
+    @include media(576) {
+      @include resa("font-size", 21px);
+      @include resa("line-height", 24px);
+    }
+  }
+  &Text {
+    color: #666666;
+    font-weight: 500;
+    @include resl("margin-top", 8px);
+    @include resl("font-size", 17px);
+    @include resl("line-height", 22px);
+    @include resl("letter-spacing", -0.32px);
+    @include media(576) {
+      @include resa("margin-top", 8px);
+      @include resa("font-size", 17px);
+      @include resa("line-height", 22px);
+      @include resa("letter-spacing", -0.32px);
+    }
+  }
+}
+
+.energy {
+  &List {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include resl("gap", 16px);
+    @include resl("margin-top", 12px);
+    @include media(576) {
+      grid-template-columns: repeat(1, 1fr);
+      @include media(576) {
+        @include resa("gap", 16px);
+        @include resa("margin-top", 12px);
+      }
+    }
+    &Item {
+      width: 100%;
+      border-color: #00000014;
+      border-style: solid;
+      @include resl("border-radius", 16px);
+      @include resl("border-width", 1px);
+      @include resl("padding", 12px);
+      @include resl("padding-bottom", 21px);
+      @include media(576) {
+        @include resa("border-radius", 12px);
+        @include resa("border-width", 1px);
+        @include resa("padding", 12px);
+      }
+    }
+  }
+  &Item {
+    &Num {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #277247;
+      background-color: #afe4c5;
+      width: 100%;
+      font-weight: 500;
+      @include resl("font-size", 21px);
+      @include resl("line-height", 27.72px);
+      @include resl("border-radius", 12px);
+      @include resl("padding", 7px);
+      @include media(576) {
+        @include resa("font-size", 21px);
+        @include resa("line-height", 27.72px);
+        @include resa("border-radius", 10px);
+        @include resa("padding", 7px);
+      }
+    }
+    &Title {
+      font-weight: 500;
+      text-align: center;
+      @include resl("margin-top", 11px);
+      @include resl("font-size", 21px);
+      @include resl("line-height", 27.72px);
+      @include media(576) {
+        @include resa("margin-top", 10px);
+        @include resa("font-size", 21px);
+        @include resa("line-height", 27.72px);
+      }
+    }
+    &Value {
+      color: #666666;
+      font-weight: 400;
+      text-align: center;
+      @include resl("margin-top", 2px);
+      @include resl("font-size", 17px);
+      @include resl("line-heigt", 22.44px);
+      @include media(576) {
+        @include resa("margin-top", 2px);
+        @include resa("font-size", 17px);
+        @include resa("line-heigt", 22.44px);
+      }
+    }
+  }
+}
+
+.similar {
+  @include resl("margin-top", 80px);
+  @include media(576) {
+    @include resa("margin-top", 80px);
+  }
+  &Title {
+    font-weight: 500;
+    @include resl("font-size", 32px);
+    @include resl("line-height", 40px);
+    @include media(576) {
+      @include resa("font-size", 32px);
+      @include resa("line-height", 40px);
+    }
+  }
+  &List {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    @include resl("gap", 8px);
+    @include resl("margin-top", 32px);
+    @include media(576) {
+      grid-template-columns: repeat(1, 1fr);
+      @include resa("gap", 16px);
+      @include resa("margin-top", 24px);
+    }
+    &Item {
+      width: 100%;
+      border-color: #00000014;
+      transition: 0.2s all;
+      border-style: solid;
+      background-color: #f5f5f5;
+      box-shadow: 0px 13px 31px 0px #d1d1d1a3;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      @include resl("gap", 35px);
+      @include resl("padding", 12px);
+      @include resl("padding-top", 18.5px);
+      @include resl("padding-bottom", 18.5px);
+      @include resl("border-width", 1px);
+      @include resl("height", 320px);
+      @include resl("border-radius", 24px);
+      @include media(576) {
+        @include resa("gap", 12px);
+        @include resa("padding", 14px);
+        @include resa("border-width", 1px);
+        @include resa("height", 320px);
+        height: auto;
+        @include resa("border-radius", 16px);
+      }
+      @media (min-width: 577px) {
+        &:hover {
+          border-color: #ee2c3f;
+          .similarItemBox {
+            opacity: 0;
+            visibility: hidden;
+          }
+          .similarItemBtn {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+  &Item {
+    &Box {
+      transition: 0.2s all;
+    }
+    &Btn {
+      visibility: hidden;
+      opacity: 0;
+      display: flex;
+      transition: 0.2s all;
+      position: absolute;
+      @include resl("bottom", 26.5px);
+      @include resl("left", 12px);
+      @include resl("right", 12px);
+      @include resl("height", 44px);
+      align-items: center;
+      justify-content: space-between;
+      @include media(576) {
+        opacity: 1;
+        visibility: visible;
+        position: static;
+        height: auto;
+        border-style: solid;
+        border-color: #cf2027;
+        @include resa("border-radius", 12px);
+        @include resa("padding", 14px);
+        @include resa("padding-top", 8px);
+        @include resa("padding-bottom", 8px);
+        background-color: #cf2027;
+        @include resa("border-width", 1px);
+      }
+      span {
+        font-weight: 500;
+        @include resl("font-size", 17px);
+        @include resl("line-height", 22px);
+        @include media(576) {
+          color: #ffffff;
+          @include resa("font-size", 17px);
+          @include resa("line-height", 22px);
+        }
+      }
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include resl("width", 44px);
+        @include resl("height", 44px);
+        @include media(576) {
+          @include resa("width", 30px);
+          @include resa("height", 30px);
+        }
+        svg {
+          object-fit: contain;
+          @include resl("width", 34px);
+          @include resl("height", 34px);
+          path {
+            color: #000000;
+          }
+          @include media(576) {
+            @include resa("width", 30px);
+            @include resa("height", 30px);
+            path {
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+    &Img {
+      width: 100%;
+      position: relative;
+      @include resl("height", 196px);
+      @include media(576) {
+        @include resa("height", 210px);
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    &Energy {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #afe4c5;
+      color: #277247;
+      font-weight: 700;
+      @include resl("font-size", 13px);
+      @include resl("line-height", 16px);
+      @include resl("border-radius", 100px);
+      @include resl("padding", 8px);
+      @include media(576) {
+        @include resa("font-size", 12px);
+        @include resa("line-height", 14px);
+        @include resa("border-radius", 12px);
+        @include resa("padding", 8px);
+      }
+    }
+    &Icons {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include resl("gap", 8px);
+      @include media(576) {
+        @include resa("gap", 8px);
+      }
+    }
+    &Icon {
+      background-color: #cf2027;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include resl("width", 56px);
+      @include resl("height", 56px);
+      @include media(576) {
+        @include resa("width", 40px);
+        @include resa("height", 40px);
+      }
+      svg {
+        @include resl("width", 34px);
+        @include resl("height", 34px);
+        @include media(576) {
+          @include resa("width", 22px);
+          @include resa("height", 22px);
+        }
+      }
+    }
+    &Name {
+      font-weight: 400;
+      @include resl("font-size", 17px);
+      @include resl("line-height", 22px);
+      @include media(576) {
+        @include resa("font-size", 17px);
+        @include resa("line-height", 22px);
+      }
+    }
+    &Type {
+      font-weight: 500;
+      @include resl("margin-top", 8px);
+      @include resl("font-size", 17px);
+      @include resl("line-height", 22px);
+      @include media(576) {
+        @include resa("margin-top", 4px);
+        @include resa("font-size", 17px);
+        @include resa("line-height", 22px);
+      }
+    }
+  }
+}
+
+.footer {
+  @include resl("margin-top", 120px);
+}

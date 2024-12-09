@@ -1,0 +1,172 @@
+@import "../../app/styles/mixins.scss";
+
+.banner {
+  @include resl("margin-top", 20px);
+  @include media(576) {
+    @include resa("margin-top", 20px);
+  }
+  &Container {
+    width: 100%;
+  }
+  &Inner {
+    background-image: url("/banner.png");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    @include media(576) {
+      position: relative;
+    }
+    &Box {
+      width: 100%;
+      @include resl("height", 748px);
+      position: relative;
+      @include resl("padding", 24px);
+      padding-right: 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      @include media(576) {
+        flex-direction: column;
+        justify-content: flex-start;
+        @include resa("gap", 20px);
+        padding: 0;
+        height: auto;
+      }
+    }
+    @include media(576) {
+      @include resa("height", 300px);
+      @include resa("border-radius", 16px);
+      @include resa("background-size", 600px);
+      background-position: left;
+    }
+  }
+  &Box {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    background-color: #ffffff;
+    @include resl("gap", 12px);
+    @include resl("padding", 24px);
+    @include resl("width", 768px);
+    @include resl("border-radius", 24px);
+    @include media(576) {
+      width: 100%;
+      flex-direction: column;
+      @include resa("gap", 16px);
+      @include resa("padding", 20px);
+      @include resa("padding-left", 16px);
+      @include resa("padding-right", 16px);
+      @include resa("border-radius", 16px);
+      background-color: #f4f4f4;
+    }
+    &Img {
+      border-color: #ffffff;
+      border-style: solid;
+      overflow: hidden;
+      @include resl("border-width", 1px);
+      @include resl("border-radius", 16px);
+      @include resl("min-width", 172px);
+      @include resl("width", 172px);
+      @include resl("height", 152px);
+      @include media(576) {
+        @include resa("border-width", 1px);
+        @include resa("border-radius", 20px);
+        @include resa("min-width", 100px);
+        @include resa("width", 100px);
+        @include resa("height", 100px);
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &Second {
+      @include resl("width", 472px);
+      background-color: #f4f4f4;
+      @include media(576) {
+        @include media(576) {
+          width: 100%;
+        }
+      }
+      .banner {
+        &Box {
+          &Img {
+            @include resl("min-width", 156px);
+            @include resl("width", 156px);
+            @include resl("height", 156px);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include media(576) {
+              @include resa("min-width", 100px);
+              @include resa("width", 100px);
+              @include resa("height", 100px);
+            }
+          }
+          &Btn {
+            background-color: #0f2a54;
+          }
+        }
+      }
+    }
+    &Logo {
+      @include resl("width", 92px, true);
+      @include resl("height", 92px, true);
+      position: absolute;
+      @include media(576) {
+        @include resa("width", 60px, true);
+        @include resa("height", 60px, true);
+      }
+    }
+    &Title {
+      font-weight: 600;
+      @include resl("font-size", 25px);
+      @include resl("line-height", 24px);
+      @include media(576) {
+        @include resa("font-size", 18px);
+        @include resa("line-height", 22px);
+      }
+    }
+    &Text {
+      font-weight: 500;
+      color: #7d96a8;
+      @include resl("margin-top", 8px);
+      @include resl("font-size", 14px);
+      @include resl("line-height", 18px);
+      @include media(576) {
+        @include resa("margin-top", 8px);
+        @include resa("font-size", 14px);
+        @include resa("line-height", 18px);
+      }
+    }
+    &Btn {
+      background-color: #ee2c3f;
+      color: #ffffff;
+      box-shadow: 0px 13px 17px 0px #00000014;
+      font-weight: 500;
+      display: inline-block;
+      @include resl("border-radius", 12px);
+      @include resl("font-size", 17px);
+      @include resl("line-height", 24px);
+      @include resl("padding", 12px);
+      @include resl("padding-left", 16px);
+      @include resl("padding-right", 16px);
+      @include resl("margin-top", 16px);
+      @include media(576) {
+        @include resa("border-radius", 10px);
+        @include resa("font-size", 14px);
+        @include resa("line-height", 24px);
+        @include resa("padding", 8px);
+        @include resa("padding-left", 16px);
+        @include resa("padding-right", 16px);
+        @include resa("margin-top", 16px);
+      }
+    }
+  }
+}

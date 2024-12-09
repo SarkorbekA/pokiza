@@ -1,0 +1,227 @@
+@import "../../app/styles/mixins.scss";
+
+.footer {
+    @include resl("margin-top", 90px);
+    background-color: #000000;
+    @include resl("border-top-left-radius", 40px);
+    @include resl("border-top-right-radius", 40px);
+    @include resl("padding-top", 52px);
+    @include resl("padding-bottom", 64px);
+    @include media(576) {
+        @include resa("margin-top", 90px);
+        @include resa("border-top-left-radius", 20px);
+        @include resa("border-top-right-radius", 20px);
+        @include resa("padding-top", 52px);
+        @include resa("padding-bottom", 64px);
+    }
+    &Container {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        @include media(576) {
+            max-width: 100%;
+            @include resa("padding-left", 20px);
+            @include resa("padding-right", 20px);
+        }
+    }
+
+    &Top {
+        width: 100%;
+        @include resl("margin-bottom", 10px);
+
+        &Title {
+            font-weight: 600;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            color: white;
+            @include resl("margin-bottom", 24px);
+            @include resl("font-size", 42px);
+            @include resl("line-height", 41px);
+            @include resl("max-width", 416px);
+            @include media(576) {
+                @include resa("margin-bottom", 24px);
+                @include resa("font-size", 28px);
+                @include resa("line-height", 36px);
+                @include resa("max-width", 416px);
+            }
+        }
+    }
+
+    &Input {
+        display: flex;
+        align-self: center;
+        justify-content: flex-start;
+        overflow: hidden;
+        background-color: white;
+        @include resl("border-radius", 100px);
+        @include resl("width", 400px);
+        @include media(576) {
+            width: 100%;
+            @include resa("border-radius", 16px);
+        }
+        &Input {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-weight: 400;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            @include resl("font-size", 17px);
+            @include resl("line-height", 24px);
+            @include resl("padding", 16px);
+            @include resl("height", 56px);
+            @include media(576) {
+                @include resa("font-size", 17px);
+                @include resa("line-height", 24px);
+                @include resa("padding", 16px);
+                @include resa("height", 56px);
+            }
+        }
+
+        &Btn {
+            min-width: max-content;
+            background-color: black;
+            color: white;
+            font-weight: 400;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            @include resl("font-size", 15px);
+            @include resl("line-height", 20px);
+            @include resl("margin", 8px, true);
+            @include resl("border-radius", 100px);
+            @include resl("padding", 10px);
+            @include resl("padding-left", 12px);
+            @include resl("padding-right", 12px);
+            @include media(576) {
+                @include resa("font-size", 15px);
+                @include resa("line-height", 20px);
+                @include resa("margin", 4px, true);
+                @include resa("border-radius", 16px);
+                @include resa("padding", 10px);
+                @include resa("padding-left", 12px);
+                @include resa("padding-right", 12px);
+            }
+        }
+    }
+
+    &Content {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &Left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            @include resl("margin-top", 26px);
+            @include media(576) {
+                @include resa("margin-top", 32px);
+            }
+            a {
+                display: inline-block;
+                @include resl("width", 105px);
+                @include resl("height", 32px);
+                @include resl("margin-bottom", 12px);
+                @include media(576) {
+                    @include resa("width", 105px);
+                    @include resa("height", 32px);
+                    @include resa("margin-bottom", 12px);
+                }
+                svg {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            p {
+                color: white;
+                font-weight: 500;
+                letter-spacing: 0.01em;
+                text-align: left;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+                @include resl("font-size", 14px);
+                @include resl("line-height", 22.4px);
+                @include media(576) {
+                    @include resa("font-size", 14px);
+                    @include resa("line-height", 22.4px);
+                }
+            }
+        }
+    }
+
+    &Bot {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        @include resl("margin-top", 64px);
+        @include media(576) {
+            @include resa("margin-top", 40px);
+            @include resa("gap", 48px);
+            flex-direction: column;
+        }
+        &Left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include resl("gap", 49px);
+            @include media(576) {
+                @include resa("gap", 36px);
+                flex-direction: column;
+            }
+        }
+
+        &Btn {
+            color: white;
+            font-weight: 400;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            @include resl("font-size", 21px);
+            @include resl("line-height", 24px);
+            @include media(576) {
+                @include resa("font-size", 21px);
+                @include resa("line-height", 24px);
+            }
+        }
+
+        &Right {
+            display: flex;
+            align-items: center;
+            @include resl("gap", 16px);
+            @include media(576) {
+                @include resa("gap", 20px);
+            }
+        }
+
+        &Link {
+            background-color: white;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            @include resl("width", 40px);
+            @include resl("height", 40px);
+            @include media(576) {
+                @include resa("width", 40px);
+                @include resa("height", 40px);
+            }
+            svg {
+                @include resl("width", 24px);
+                @include resl("height", 24px);
+                @include media(576) {
+                    @include resa("width", 24px);
+                    @include resa("height", 24px);
+                }
+            }
+        }
+    }
+}
