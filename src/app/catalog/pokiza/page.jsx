@@ -17,7 +17,7 @@ const products = [
     calories: 219.1,
     fat: 19.5,
     proteins: 10.4,
-     
+
     meatType: "курица"
   },
   {
@@ -28,7 +28,7 @@ const products = [
     calories: 219.1,
     fat: 19.5,
     proteins: 10.4,
-      
+
     meatType: "курица"
   },
   {
@@ -39,7 +39,7 @@ const products = [
     calories: 219.1,
     fat: 21.2,
     proteins: 10.4,
-      
+
     meatType: "курица"
   },
   {
@@ -50,7 +50,7 @@ const products = [
     calories: 219.1,
     fat: 19.5,
     proteins: 10.4,
-      
+
     meatType: "курица"
   },
   {
@@ -61,7 +61,7 @@ const products = [
     calories: 219.1,
     fat: 19.5,
     proteins: 10.4,
-      
+
     meatType: "курица и говядина"
   },
   {
@@ -72,7 +72,7 @@ const products = [
     calories: 219.1,
     fat: 19.5,
     proteins: 10.4,
-      
+
     meatType: "курица и говядина"
   },
   {
@@ -83,7 +83,7 @@ const products = [
     calories: 219.1,
     fat: 19.5,
     proteins: 10.4,
-      
+
     meatType: "курица и говядина"
   },
   {
@@ -94,7 +94,7 @@ const products = [
     calories: 219.1,
     fat: 21.2,
     proteins: 10.4,
-      
+
     meatType: "курица и говядина"
   },
   {
@@ -105,7 +105,7 @@ const products = [
     calories: 215.8,
     fat: 17.0,
     proteins: 15.2,
-      
+
     meatType: "курица и говядина"
   },
   {
@@ -116,7 +116,7 @@ const products = [
     calories: 215.8,
     fat: 17.0,
     proteins: 15.2,
-      
+
     meatType: "курица и говядина"
   },
   {
@@ -127,7 +127,7 @@ const products = [
     calories: 219.1,
     fat: 21.2,
     proteins: 10.4,
-      
+
     meatType: "курица и говядина"
   },
   {
@@ -138,7 +138,7 @@ const products = [
     calories: 186.8,
     fat: 16.0,
     proteins: 10.7,
-      
+
     meatType: "курица и говядина"
   },
   {
@@ -149,7 +149,7 @@ const products = [
     calories: 186.8,
     fat: 16.0,
     proteins: 10.7,
-      
+
     meatType: "курица и говядина"
   },
   // {
@@ -171,7 +171,7 @@ const products = [
     calories: 186.8,
     fat: 16.0,
     proteins: 10.7,
-      
+
     meatType: "курица"
   },
 ];
@@ -205,7 +205,7 @@ export default function CatalogPage() {
     if (filter === "all") {
       setFilteredProducts(products);
     } else if (filter === "sausages") {
-      setFilteredProducts(products.filter((product) => product.type));
+      setFilteredProducts(products.filter((product) => product.productType != "sausage"));
     }
 
     // else if (filter === "fatLevel") {
@@ -220,7 +220,7 @@ export default function CatalogPage() {
     if (meatType === "all") {
       setFilteredProducts(products);
     } else {
-      setFilteredProducts(products.filter((product) => product.meatType === meatType)); // Фильтруем по типу мяса
+      setFilteredProducts(products.filter((product) => product.meatType === meatType));
     }
   };
 

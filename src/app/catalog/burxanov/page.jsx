@@ -68,7 +68,404 @@ const products = [
     proteins: 10.4,
     meatType: "курица"
   },
+  {
+    id: 31,
+    name: "Для Завтрака",
+    img: "/burxanov/44.png",
+    type: "1-NAV",
+    calories: 220.3,
+    fat: 19.5,
+    proteins: 10.7,
+    meatType: "курица"
+  },
+  {
+    id: 32,
+    name: "Для Завтрака",
+    img: "/burxanov/43.png",
+    type: "1-NAV",
+    calories: 235.5,
+    fat: 19.5,
+    proteins: 10.7,
+    meatType: "курица"
+  },
+  {
+    id: 33,
+    name: "Для Завтрака Ишонч",
+    img: "/burxanov/42.png",
+    type: "1-NAV",
+    calories: 235.5,
+    fat: 21.2,
+    proteins: 10.5,
+    meatType: "курица"
+  },
+  {
+    id: 34,
+    name: "Для Завтрака",
+    img: "/burxanov/41.png",
+    type: "2-NAV 2022",
+    calories: 235.5,
+    fat: 21.2,
+    proteins: 10.5,
+    meatType: "курица"
+  },
+  {
+    id: 35,
+    name: "Для Завтрака(стакан)",
+    img: "/burxanov/40.png",
+    type: "1-NAV",
+    calories: 235.5,
+    fat: 21.2,
+    proteins: 10.5,
+    meatType: "курица"
+  },
+  {
+    id: 36,
+    name: "Варёная Столичная",
+    img: "/burxanov/39.png",
+    type: "1-NAV",
+    calories: 220.3,
+    fat: 19.5,
+    proteins: 10.7,
+    meatType: "курица"
+  },
+  {
+    id: 37,
+    name: "Любимая",
+    img: "/burxanov/38.png",
+    type: "1-NAV",
+    calories: 223.7,
+    fat: 18.5,
+    proteins: 12.7,
+    meatType: "курица"
+  },
+  {
+    id: 38,
+    name: "Любительская 90 хот дог",
+    img: "/burxanov/37.png",
+    type: "1-NAV",
+    calories: 225.5,
+    fat: 21.2,
+    proteins: 10.5,
+    meatType: "курица"
+  },
+  {
+    id: 39,
+    name: "Варёная Шедевр",
+    img: "/burxanov/36.png",
+    type: "1-NAV",
+    calories: 220.3,
+    fat: 19.5,
+    proteins: 10.7,
+    meatType: "курица"
+  },
+  {
+    id: 40,
+    name: "Сосиски Полоска",
+    img: "/burxanov/35.png",
+    type: "1-NAV",
+    calories: 186.8,
+    fat: 16.0,
+    proteins: 10.7,
+    productType: "sausage",
+    meatType: "курица"
+  },
+  {
+    id: 41,
+    name: "Сосиски Тигровые",
+    img: "/burxanov/34.png",
+    type: "1-NAV",
+    calories: 186.8,
+    fat: 16.0,
+    proteins: 10.7,
+    productType: "sausage",
+    meatType: "курица"
+  },
+  {
+    id: 42,
+    name: "Сосиски Сардельки",
+    img: "/burxanov/33.png",
+    type: "1-NAV",
+    calories: 186.8,
+    fat: 16.0,
+    proteins: 10.7,
+    productType: "sausage",
+    meatType: "курица"
+  },
+  {
+    id: 43,
+    name: "Сосиски Говяжьи",
+    img: "/burxanov/32.png",
+    type: "1-NAV",
+    calories: 186.8,
+    fat: 16.0,
+    proteins: 10.7,
+    productType: "sausage",
+    meatType: "курица и говядина"
+  },
+  {
+    id: 44,
+    name: "Сосиски Говяжьи",
+    img: "/burxanov/31.png",
+    type: "1-NAV",
+    calories: 186.8,
+    fat: 16.0,
+    proteins: 10.7,
+    productType: "sausage",
+    meatType: "курица и говядина"
+  },
+  {
+    id: 45,
+    name: "Сосиски Говяжьи",
+    img: "/burxanov/30.png",
+    type: "1-NAV",
+    calories: 186.8,
+    fat: 16.0,
+    proteins: 10.7,
+    productType: "sausage",
+    meatType: "курица и говядина"
+  },
+  {
+    id: 46,
+    name: "Салями",
+    img: "/burxanov/27.png",
+    type: "1-NAV",
+    calories: 214.0,
+    fat: 16.0,
+    proteins: 15.5,
+    meatType: "курица"
+  },
+  {
+    id: 47,
+    name: "Бурханов Московская Д-50",
+    img: "/burxanov/26.png",
+    type: "1-NAV",
+    calories: 214.0,
+    fat: 16.0,
+    proteins: 15.5,
+    meatType: "курица"
+  },
+  {
+    id: 48,
+    name: "Ари Уя",
+    img: "/burxanov/25.png",
+    type: "1-NAV",
+    calories: 214.0,
+    fat: 16.0,
+    proteins: 15.5,
+    meatType: "курица"
+  },
+  {
+    id: 49,
+    name: "Полукопчённый Сервелат",
+    img: "/burxanov/24.png",
+    type: "1-NAV",
+    calories: 214.0,
+    fat: 16.0,
+    proteins: 15.5,
+    meatType: "курица"
+  },
+  {
+    id: 59,
+    name: "Полукопчённая Полтавская",
+    img: "/burxanov/23.png",
+    type: "1-NAV",
+    calories: 207.9,
+    fat: 16.3,
+    proteins: 15.3,
+    meatType: "курица"
+  },
+  {
+    id: 60,
+    name: "Полукопчёный Полтавская",
+    img: "/burxanov/22.png",
+    type: "1-NAV",
+    calories: 207.9,
+    fat: 16.3,
+    proteins: 15.5,
+    meatType: "курица"
+  },
+  {
+    id: 61,
+    name: "Полукопчёный Оргинал",
+    img: "/burxanov/21.png",
+    type: "1-NAV",
+    calories: 215.8,
+    fat: 17.0,
+    proteins: 15.2,
+    meatType: "курица"
+  },
+  {
+    id: 62,
+    name: "Баракали",
+    img: "/burxanov/19.png",
+    type: "1-NAV",
+    calories: 215.8,
+    fat: 17.0,
+    proteins: 15.2,
+    meatType: "курица"
+  },
+  {
+    id: 63,
+    name: "Полукопчёный Таллинская",
+    img: "/burxanov/18.png",
+    type: "1-NAV",
+    calories: 207.9,
+    fat: 16.3,
+    proteins: 15.3,
+    meatType: "курица"
+  },
+  {
+    id: 64,
+    name: "Мазали Полукопченая",
+    img: "/burxanov/16.png",
+    type: "1-NAV",
+    calories: 207.9,
+    fat: 16.3,
+    proteins: 15.3,
+    meatType: "курица"
+  },
+  {
+    id: 65,
+    name: "Полукопченая Особая",
+    img: "/burxanov/15.png",
+    type: "1-NAV",
+    calories: 215.8,
+    fat: 17.0,
+    proteins: 15.2,
+    meatType: "курица"
+  },
+  {
+    id: 66,
+    name: "Полукопченая Снюга",
+    img: "/burxanov/13.png",
+    type: "1-NAV",
+    calories: 214.0,
+    fat: 15.5,
+    proteins: 16.0,
+    meatType: "курица"
+  },
+  {
+    id: 67,
+    name: "Полукопченая Говяжья",
+    img: "/burxanov/11.png",
+    type: "1-NAV",
+    calories: 207.9,
+    fat: 16.3,
+    proteins: 15.3,
+    meatType: "курица и говядина"
+  },
+  {
+    id: 68,
+    name: "Хайат",
+    img: "/burxanov/10.png",
+    type: "1-NAV",
+    calories: 215.8,
+    fat: 17.0,
+    proteins: 15.2,
+    meatType: "курица"
+  },
+  {
+    id: 69,
+    name: "Украинская",
+    img: "/burxanov/12.png",
+    type: "1-NAV",
+    calories: 215.8,
+    fat: 17.0,
+    proteins: 15.2,
+    meatType: "курица"
+  },
+  {
+    id: 70,
+    name: "Бурхонов Московская",
+    img: "/burxanov/9.png",
+    type: "1-NAV",
+    calories: 200.3,
+    fat: 15.5,
+    proteins: 15.2,
+    meatType: "курица"
+  },
+  {
+    id: 71,
+    name: "Бурхонов Сервелат",
+    img: "/burxanov/8.png",
+    type: "1-NAV",
+    calories: 207.9,
+    fat: 16.3,
+    proteins: 15.3,
+    meatType: "курица"
+  },
+  {
+    id: 72,
+    name: "Бурхонов Чимкентская",
+    img: "/burxanov/6.png",
+    type: "1-NAV",
+    calories: 210.2,
+    fat: 16.6,
+    proteins: 15.2,
+    meatType: "курица"
+  },
+  {
+    id: 73,
+    name: "Чимкентская",
+    img: "/burxanov/7.png",
+    type: "1-NAV",
+    calories: 215.8,
+    fat: 17.0,
+    proteins: 15.2,
+    meatType: "курица"
+  },
+  {
+    id: 74,
+    name: "Навруз",
+    img: "/burxanov/5.png",
+    type: "1-NAV",
+    calories: 214.0,
+    fat: 16.0,
+    proteins: 15.5,
+    meatType: "курица"
+  },
+  {
+    id: 75,
+    name: "Чесночная",
+    img: "/burxanov/4.png",
+    type: "1-NAV",
+    calories: 215.8,
+    fat: 17.0,
+    proteins: 15.5,
+    meatType: "курица"
+  },
+  {
+    id: 76,
+    name: "Полукопчёная Жорж",
+    img: "/burxanov/3.png",
+    type: "1-NAV",
+    calories: 212.0,
+    fat: 15.0,
+    proteins: 16.0,
+    meatType: "курица"
+  },
+  {
+    id: 77,
+    name: "Московская Д-40",
+    img: "/burxanov/2.png",
+    type: "1-NAV",
+    calories: 214.0,
+    fat: 16.0,
+    proteins: 15.5,
+    meatType: "курица"
+  },
+  {
+    id: 78,
+    name: "Полукопчёная Городская",
+    img: "/burxanov/1.png",
+    type: "1-NAV",
+    calories: 212.0,
+    fat: 15.0,
+    proteins: 16.0,
+    meatType: "курица"
+  },
 ]
+
 
 export default function CatalogPage() {
   const [filteredProducts, setFilteredProducts] = useState(products);
@@ -93,13 +490,14 @@ export default function CatalogPage() {
     setActiveSort(field);
     setActiveFilter(null);
   };
+
   const handleFilter = (filter) => {
     setActiveFilter(filter);
     setActiveSort(null);
     if (filter === "all") {
       setFilteredProducts(products);
     } else if (filter === "sausages") {
-      setFilteredProducts(products.filter((product) => product.type));
+      setFilteredProducts(products.filter((product) => product.productType != "sausage"));
     }
   };
 
