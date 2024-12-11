@@ -15,7 +15,7 @@ const Header = ({ isBlue = false }) => {
         <div className={styles.headerContent}>
           <div className={styles.headerLeft}>
             <a href="/" className={styles.headerLogo}>
-              <img src="logo.svg" alt="logo" />
+              <img src="/logo.svg" alt="logo" />
             </a>
             <ul className={styles.headerNav}>
               <li className={styles.headerNavItem}>
@@ -24,7 +24,7 @@ const Header = ({ isBlue = false }) => {
                 </a>
               </li>
               <li className={styles.headerNavItem}>
-                <a href="/catalog" className={styles.headerNavLink}>
+                <a href="/catalog/pokiza" className={styles.headerNavLink}>
                   Каталог
                 </a>
               </li>
@@ -62,7 +62,7 @@ const Header = ({ isBlue = false }) => {
                 </a>
               </li>
               <li onClick={() => setMenuOpen(false)} className={styles.headerNavItem}>
-                <a href="/catalog" className={styles.headerNavLink}>
+                <a href="/catalog/pokiza" className={styles.headerNavLink}>
                   Каталог
                 </a>
               </li>

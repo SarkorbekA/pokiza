@@ -17,7 +17,7 @@ const Banner = ({ }) => {
             <div className={styles.bannerBoxRight}>
               <h3 className={styles.bannerBoxTitle}>POKIZA</h3>
               <p className={styles.bannerBoxText}>Натуральные ингредиенты:  отборное мясо, ароматные специи и никаких искусственных добавок.  Мы заботимся о вашем здоровье и используем только лучшее сырье.</p>
-              <Link href="/catalog"
+              <Link href="/catalog/pokiza"
                 className={styles.bannerBoxBtn}>
                 Посмотреть каталог
               </Link>
@@ -31,7 +31,7 @@ const Banner = ({ }) => {
             <div className={styles.bannerBoxRight}>
               <h3 className={styles.bannerBoxTitle}>BURXANOV</h3>
               <p className={styles.bannerBoxText}>Непревзойденный вкус:  наши колбасы – это настоящий праздник для каждого стола.</p>
-              <Link href="/catalog"
+              <Link href="/catalog/burxanov"
                 className={styles.bannerBoxBtn}>
                 Посмотреть каталог
               </Link>
